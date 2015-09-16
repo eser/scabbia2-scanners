@@ -38,9 +38,9 @@ class Scanners
      *
      * @return void
      */
-    public function register($uScanners)
+    public function register(...$uScanners)
     {
-        foreach ((array)$uScanners as $tScanner) {
+        foreach ($uScanners as $tScanner) {
             $this->scanners[] = $tScanner;
         }
     }
@@ -52,9 +52,9 @@ class Scanners
      *
      * @return void
      */
-    public function processFolder($uFolders)
+    public function processFolder(...$uFolders)
     {
-        foreach ((array)$uFolders as $tFolder) {
+        foreach ($uFolders as $tFolder) {
             FileSystem::getFilesWalk(
                 $tFolder,
                 "*.php",
