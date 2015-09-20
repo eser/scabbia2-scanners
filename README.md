@@ -6,10 +6,11 @@
 [![Total Downloads](https://poser.pugx.org/scabbiafw/scabbia2-scanners/downloads.png)](https://packagist.org/packages/scabbiafw/scabbia2-scanners)
 [![Latest Stable Version](https://poser.pugx.org/scabbiafw/scabbia2-scanners/v/stable)](https://packagist.org/packages/scabbiafw/scabbia2-scanners)
 [![Latest Unstable Version](https://poser.pugx.org/scabbiafw/scabbia2-scanners/v/unstable)](https://packagist.org/packages/scabbiafw/scabbia2-scanners)
+[![Documentation Status](https://readthedocs.org/projects/scabbia2-documentation/badge/?version=latest)](http://docs.scabbiafw.com/)
 [![License](https://poser.pugx.org/scabbiafw/scabbia2-scanners/license.png)](https://packagist.org/packages/scabbiafw/scabbia2-scanners)
 
 ## Links
-- [Documentation](http://scabbiafw.com/docs/)
+- [Documentation](http://docs.scabbiafw.com/)
 - [Twitter](https://twitter.com/scabbiafw)
 - [Contributor List](contributors.md)
 - [License Information](LICENSE)
