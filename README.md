@@ -34,7 +34,7 @@ use Scabbia\Scanners\ScannerInterface;
 use Scabbia\Scanners\TokenStream;
 use ReflectionClass;
 
-$customScanner = new class() implements ScannerInterface {
+$customScanner = new class () implements ScannerInterface {
     public function processFile($file, $fileContents) {
         echo 'processing file ', $file;
     }
