@@ -9,6 +9,53 @@
 [![Latest Unstable Version](https://poser.pugx.org/eserozvataf/scabbia2-scanners/v/unstable)](https://packagist.org/packages/eserozvataf/scabbia2-scanners)
 [![Documentation Status](https://readthedocs.org/projects/scabbia2-documentation/badge/?version=latest)](https://readthedocs.org/projects/scabbia2-documentation)
 
+## Usage
+
+### Extracting Annotations from Source Folder
+
+```php
+use Scabbia\Scanners\Scanners;
+use Scabbia\Scanners\AnnotationScanner;
+
+$annotationScanner = new AnnotationScanner();
+
+$scanners = new Scanners();
+$scanners->register($annotationScanner);
+$scanners->processFolder('src/');
+
+var_dump($annotationScanner->result);
+```
+
+### Custom Scanner
+
+```php
+use Scabbia\Scanners\Scanners;
+use Scabbia\Scanners\ScannerInterface;
+use Scabbia\Scanners\TokenStream;
+use ReflectionClass;
+
+$customScanner = new class() implements ScannerInterface {
+    public function processFile($file, $fileContents) {
+        echo 'processing file ', $file;
+    }
+
+    public function processTokenStream(TokenStream $tokenStream) {
+    }
+
+    public function processClass($class, ReflectionClass $reflection) {
+        echo 'processing class ', $class;
+    }
+
+    public function finalize() {
+        echo 'done.';
+    }
+};
+
+$scanners = new Scanners();
+$scanners->register($customScanner);
+$scanners->processFolder('src/');
+```
+
 ## Links
 - [List of All Scabbia2 Components](https://github.com/eserozvataf/scabbia2)
 - [Documentation](https://readthedocs.org/projects/scabbia2-documentation)
